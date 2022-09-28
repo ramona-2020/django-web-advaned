@@ -1,0 +1,17 @@
+{% extends 'base/base.html' %}
+
+{% block page_content %}<h1>{{ title }}</h1>
+<a href="{% url 'todos create' %}" class="btn btn-primary">Create todo</a>
+
+    <table class="table">
+    <tbody>
+        {% for todo in object_list %}
+            <tr>
+                <td>
+                    <a href="{% url 'todos details' todo.pk %}">{{ todo.title }}</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

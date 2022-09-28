@@ -1,0 +1,9 @@
+{% extends 'base/base.html' %}
+
+{% block page_content %}
+    <h1>Todo Title: {{ object.title }}</h1>
+    <p>Todo Desctiption: {{ object.description }}</p>
+    <p>Todo Category: {{ object.category }}</p>
+{% endblock %}
+
+<a href="{% url 'todos list' %}">Todo Lists</a>
